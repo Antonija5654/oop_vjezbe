@@ -1,0 +1,4 @@
+﻿  zadatak3.cpp
+d:\klaic\vjezba1\zadatak3\zadatak3.cpp(16): warning C4715: 'nadi_broj': not all control paths return a value
+  LINK : D:\klaic\Vjezba1\Debug\Zadatak3.exe not found or not built by the last incremental link; performing full link
+  Zadatak3.vcxproj -> D:\klaic\Vjezba1\Debug\Zadatak3.exe
