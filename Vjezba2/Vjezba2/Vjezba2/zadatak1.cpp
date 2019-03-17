@@ -3,34 +3,45 @@ using namespace std;
 
 void sortiraj(int *niz)
 {
-	
-}
-
-int *pronadi(int *niz, int *provjera, int n)
-{
-	int i, j;
+	int index, i, j;
 	for (i = 0; i < 9; i++)
 	{
-		for (j = 0; j < n; j++)
+		index = i;
+		for (j = i; j < 9; j++)
 		{
-			if (provjera[i] == niz[j])
-				;
-			else
-			{
-				niz[n + 1] = provjera[i];
-				n++;
-			}
+			if (niz[j] < niz[index])
+				index = j;
 		}
+		swap(niz[i], niz[index]);
 	}
-	return niz;
 }
 
-void main()
+void pronadi(int *niz, int *provjera)
 {
-	int* niz = new int[];
+	int i, j;
+	bool flag = true;
+	for (i = 0; i < 9; i++)
+	{
+		flag = true;
+		for (j = 0; j < 8; j++)
+		{
+			if (provjera[i] == niz[j])
+				flag = false;
+		}
+		if (flag == true)
+		{
+			niz[8] = provjera[i];
+		}
+	}
+	sortiraj(niz);
+}
+
+int main()
+{
+	int* niz = new int[9];
 	int provjera[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 	cout << "upisi niz brojeva izmedu 1 i 9, za kraj upisat 0" << endl;
-	int i=0;
+	int i=0, j;
 	int br=1;
 	while (br != 0)
 	{
@@ -38,5 +49,8 @@ void main()
 		niz[i] = br;
 		i++;
 	}
-	int n = sizeof(niz) / sizeof(int);
+	pronadi(niz, provjera);
+	for (j = 0; j < 9; j++)
+		cout << niz[j] << " ";
+	system("pause");
 }
