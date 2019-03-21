@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 
-void sortiraj(int *niz)
+void sortiraj(int *niz, int n)
 {
 	int index, i, j;
-	for (i = 0; i < 9; i++)
+	for (i = 0; i < n; i++)
 	{
 		index = i;
-		for (j = i; j < 9; j++)
+		for (j = i; j < n-1; j++)
 		{
 			if (niz[j] < niz[index])
 				index = j;
@@ -40,6 +40,7 @@ int main()
 {
 	int* niz = new int[9];
 	int provjera[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+	int n = sizeof(provjera) / sizeof(int);
 	cout << "upisi niz brojeva izmedu 1 i 9, za kraj upisat 0" << endl;
 	int i=0, j;
 	int br=1;

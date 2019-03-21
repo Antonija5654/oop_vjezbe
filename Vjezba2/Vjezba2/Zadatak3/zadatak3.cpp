@@ -3,57 +3,58 @@
 using namespace std;
 
 typedef struct vektor {
+
 	int *niz;
 	int log, fiz;
 
-void vector_new(int init)
-{
-	log = 0;
-	fiz = init;
-	niz = new int[init];
-}
-
-void vector_delete()
-{
-	delete[] niz;
-}
-
-void vector_push_back()
-{
-	if (log == fiz)
+	void vector_new(int init)
 	{
-		niz = (int*)realloc(niz, (fiz * 2)*sizeof(int));
-		fiz = fiz * 2;
+		log = 0;
+		fiz = init;
+		niz = new int[init];
 	}
-	int br;
-	cout << "unesite broj" << endl;
-	cin >> br;
-	niz[log] = br;
-	log++;
-}
 
-int vector_pop_back()
-{
-	if (log == 0)
-		return NULL;
-	log--;
-	return niz[log];
-}
+	void vector_delete()
+	{
+		delete[] niz;
+	}
 
-int &vector_front()
-{
-	return niz[0];
-}
+	void vector_push_back()
+	{
+		if (log == fiz)
+		{
+			niz = (int*)realloc(niz, (fiz * 2)*sizeof(int));
+			fiz = fiz * 2;
+		}
+		int br;
+		cout << "unesite broj" << endl;
+		cin >> br;
+		niz[log] = br;
+		log++;
+	}
 
-int &vector_back()
-{
-	return niz[log-1];
-}
+	int vector_pop_back()
+	{
+		if (log == 0)
+			return NULL;
+		log--;
+		return niz[log];
+	}
 
-int vector_size()
-{
-	return log;
-}
+	int &vector_front()
+	{
+		return niz[0];
+	}
+
+	int &vector_back()
+	{
+		return niz[log-1];
+	}
+
+	int vector_size()
+	{
+		return log;
+	}
 
 }vektor;
 
