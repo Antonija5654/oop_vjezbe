@@ -1,4 +1,1 @@
-﻿  zadatak1.cpp
-d:\klaic\oop_vjezbe\vjezba3\vjezba3\zadatak1.cpp(27): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-d:\klaic\oop_vjezbe\vjezba3\vjezba3\zadatak1.cpp(41): warning C4018: '<': signed/unsigned mismatch
-  Vjezba3.vcxproj -> D:\klaic\oop_vjezbe\Vjezba3\Debug\Zadatak1.exe
+﻿  Vjezba3.vcxproj -> D:\Antonija\faks\oop\oop_vjezbe\Vjezba3\Debug\Zadatak1.exe

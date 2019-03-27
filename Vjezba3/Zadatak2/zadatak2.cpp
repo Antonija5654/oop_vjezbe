@@ -3,17 +3,14 @@
 #include "funh.h"
 using namespace std;
 
-vector<int> novi(vector<int> v1, vector<int> v2)
-{
-	vector<int> novi;
-
-}
-
 int main()
 {
-	vector<int> v1, v2;
+	vector<int> v1, v2, novi;
 	bool flag = false;
 	v1 = dodaj(v1, false);
 	v2 = dodaj(v2, false);
-	
+	v2 = sortiraj(v2);
+	novi = novi_vec(v1, v2, novi);
+	ispis(novi);
+	system("pause");
 }

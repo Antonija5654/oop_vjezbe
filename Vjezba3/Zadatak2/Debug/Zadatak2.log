@@ -1,0 +1,15 @@
+﻿  fun.cpp
+d:\antonija\faks\oop\oop_vjezbe\vjezba3\zadatak2\funh.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\antonija\faks\oop\oop_vjezbe\vjezba3\zadatak2\fun.cpp(7): error C2572: 'dodaj': redefinition of default argument: parameter 1
+  d:\antonija\faks\oop\oop_vjezbe\vjezba3\zadatak2\funh.h(8): note: see declaration of 'dodaj'
+d:\antonija\faks\oop\oop_vjezbe\vjezba3\zadatak2\fun.cpp(7): error C2572: 'dodaj': redefinition of default argument: parameter 2
+  d:\antonija\faks\oop\oop_vjezbe\vjezba3\zadatak2\funh.h(8): note: see declaration of 'dodaj'
+d:\antonija\faks\oop\oop_vjezbe\vjezba3\zadatak2\fun.cpp(7): error C2572: 'dodaj': redefinition of default argument: parameter 3
+  d:\antonija\faks\oop\oop_vjezbe\vjezba3\zadatak2\funh.h(8): note: see declaration of 'dodaj'
+d:\antonija\faks\oop\oop_vjezbe\vjezba3\zadatak2\fun.cpp(28): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+d:\antonija\faks\oop\oop_vjezbe\vjezba3\zadatak2\fun.cpp(42): warning C4018: '<': signed/unsigned mismatch
+d:\antonija\faks\oop\oop_vjezbe\vjezba3\zadatak2\fun.cpp(51): warning C4018: '<': signed/unsigned mismatch
+d:\antonija\faks\oop\oop_vjezbe\vjezba3\zadatak2\fun.cpp(55): warning C4018: '<': signed/unsigned mismatch
+  zadatak2.cpp
+d:\antonija\faks\oop\oop_vjezbe\vjezba3\zadatak2\funh.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Generating Code...
