@@ -1,24 +1,24 @@
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
-string *popravi(string str, string *novi, int n)
+vector<char> popravi(string str, vector<char> novi)
 {
-	int i, br=0;
-	for (i = 0; i < n; i++)
+	int i;
+	for (i = 0; i < str.size(); i++)
 	{
+		cout << "OMEGALUL" << endl;
 		if (str[i]==' ')
 		{
 			cout << "test1" << endl;
-			if (str[i + 1] == ',' || str[i + 2] == '.')
+			if (str[i + 1] == ',' || str[i + 1] == '.')
 			{
-				novi[br] = str[i=1];
-				br++;
+				novi.push_back(str[i + 1]);
 			}
 			else
 			{
-				novi[br] = str[i];
-				br++;
+				novi.push_back(str[i]);
 			}
 		}
 		else if (str[i] == ',' || str[i] == '.')
@@ -26,22 +26,13 @@ string *popravi(string str, string *novi, int n)
 			cout << "test2" << endl;
 			if (str[i + 1] != ' ')
 			{
-				novi[br] = str[i];
-				br++;
-				novi[br] = ' ';
-				br++;
-			}
-			else
-			{
-				novi[br] = str[i];
-				br++;
+				novi.push_back(' ');
 			}
 		}
 		else
 		{
 			cout << "test3" << endl;
-			novi[br] = str[i];
-			br++;
+			novi.push_back(str[i]);
 		}
 	}
 	return novi;
@@ -50,13 +41,10 @@ string *popravi(string str, string *novi, int n)
 int main()
 {
 	string str = "Ja bih ,ako ikako mogu , ovu recenicu napisala ispravno .";
-	string *novi=new string;
-	int n = str.size();
-	//novi = popravi(str, novi, n);
+	vector<char> novi;
+	novi = popravi(str, novi);
 	int i;
-	int m = novi->size();
-	cout << m<<endl;
-	for (i = 0; i < m; i++)
+	for (i = 0; i < novi.size(); i++)
 		cout << novi[i];
 	system("pause");
 }

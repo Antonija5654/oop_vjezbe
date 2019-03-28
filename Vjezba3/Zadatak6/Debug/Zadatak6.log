@@ -1,0 +1,8 @@
+﻿  zadatak6.cpp
+d:\faks\antonija\oop_vjezbe\vjezba3\zadatak6\zadatak6.cpp(12): warning C4018: '<': signed/unsigned mismatch
+d:\faks\antonija\oop_vjezbe\vjezba3\zadatak6\zadatak6.cpp(15): warning C4018: '<': signed/unsigned mismatch
+d:\faks\antonija\oop_vjezbe\vjezba3\zadatak6\zadatak6.cpp(24): warning C4018: '<': signed/unsigned mismatch
+d:\faks\antonija\oop_vjezbe\vjezba3\zadatak6\zadatak6.cpp(62): warning C4018: '<': signed/unsigned mismatch
+d:\faks\antonija\oop_vjezbe\vjezba3\zadatak6\zadatak6.cpp(131): warning C4018: '<': signed/unsigned mismatch
+d:\faks\antonija\oop_vjezbe\vjezba3\zadatak6\zadatak6.cpp(141): warning C4018: '<': signed/unsigned mismatch
+  Zadatak6.vcxproj -> D:\Faks\Antonija\oop_vjezbe\Vjezba3\Debug\Zadatak6.exe

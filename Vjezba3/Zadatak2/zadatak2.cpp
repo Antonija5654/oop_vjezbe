@@ -5,6 +5,7 @@ using namespace std;
 
 int main()
 {
+	srand(time(NULL));
 	vector<int> v1, v2, novi;
 	bool flag = false;
 	v1 = dodaj(v1, false);

@@ -2,9 +2,10 @@
 #include <iostream>
 #include <vector>
 #include <time.h>
+#include <algorithm>
 using namespace std;
 
-vector<int> dodaj(vector<int> v, bool flag, int a = 0, int b = 100, int n = 5)
+vector<int> dodaj(vector<int> v, bool flag, int a, int b, int n)
 {
 	int br = 0, broj;
 	if (flag == true)
@@ -25,7 +26,6 @@ vector<int> dodaj(vector<int> v, bool flag, int a = 0, int b = 100, int n = 5)
 	}
 	else
 	{
-		srand(time(NULL));
 		while (br < n)
 		{
 			broj = a + (rand() % (b + 1));
@@ -68,44 +68,16 @@ vector<int> sortiraj(vector<int> v2)
 	return v2;
 }
 
-int binarySearch(vector<int> v2, int l, int r, int x)
-{
-	//x sta trazin, l pocetak, r kraj
-	if (r >= l) {
-		int mid = l + (r - l) / 2;
-
-		// If the element is present at the middle 
-		// itself 
-		if (v2[mid] == x)
-			return mid;
-
-		// If element is smaller than mid, then 
-		// it can only be present in left subarray 
-		if (v2[mid] > x)
-			return binarySearch(v2, l, mid - 1, x);
-
-		// Else the element can only be present 
-		// in right subarray 
-		return binarySearch(v2, mid + 1, r, x);
-	}
-
-	// We reach here when element is not 
-	// present in array 
-	return -1;
-}
-
 vector<int> novi_vec(vector<int> v1, vector<int> v2, vector<int> novi)
 {
-	int i, p, x = 0;
+	int i, p;
 	int n = v1.size();
 	int l = v1[0], r = v1[n - 1];
 	for (i = 0; i < n; i++)
 	{
-		p = binarySearch(v2, l, r, v1[i]);
-		if (p == -1)
+		if (binary_search(v2.begin(), v2.end(), v1[i]))
 		{
-			novi[x] = v1[i];
-			x++;
+			novi.push_back(v1[i]);
 		}
 	}
 	return novi;

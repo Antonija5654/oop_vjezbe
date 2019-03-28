@@ -2,6 +2,7 @@
 #define FUNH_H
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #include <time.h>
 using namespace std;
 
