@@ -1,0 +1,7 @@
+﻿  fun2.cpp
+d:\antonija\faks\oop\oop_vjezbe\vjezba4\zadatak2\header2.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  zadatak2.cpp
+d:\antonija\faks\oop\oop_vjezbe\vjezba4\zadatak2\header2.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\antonija\faks\oop\oop_vjezbe\vjezba4\zadatak2\zadatak2.cpp(9): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  Zadatak2.vcxproj -> D:\Antonija\faks\oop\oop_vjezbe\Vjezba4\Debug\Zadatak2.exe

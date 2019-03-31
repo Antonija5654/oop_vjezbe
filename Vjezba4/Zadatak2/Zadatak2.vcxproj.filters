@@ -18,12 +18,12 @@
     <ClCompile Include="zadatak2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="fun.cpp">
+    <ClCompile Include="fun2.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header.h">
+    <ClInclude Include="Header2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

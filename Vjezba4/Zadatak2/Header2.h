@@ -1,0 +1,42 @@
+#ifndef FUNH_H;
+#define FUNH_H
+#include <iostream>
+#include <math.h>
+#include <time.h>
+using namespace std;
+
+class tocke {
+private:
+	double duzina, sirina, visina;
+
+public:
+	void postavi(int x = 0, int y = 0, int z = 0);
+
+	void random(int a, int b, int c, int d, int e, int f);
+
+	const double duzinaa();
+
+	const double sirinaa();
+
+	const double visinaa();
+
+	const double oduzmi_2d(tocke t2);
+
+	const double oduzmi_3d(tocke t2);
+};
+
+class gun {
+private:
+	int br_metaka=6, kapacitet=6;
+	tocke polozaj;
+public:
+	void shoot();
+
+	void reload();
+
+	void postavi_polozaj();
+
+	int broj_metaka();
+};
+
+#endif
