@@ -1,0 +1,12 @@
+﻿  fun4.cpp
+d:\antonija\faks\oop\oop_vjezbe\vjezba4\zadatak4\header4.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\antonija\faks\oop\oop_vjezbe\vjezba4\zadatak4\fun4.cpp(40): warning C4244: 'return': conversion from 'double' to 'const int', possible loss of data
+d:\antonija\faks\oop\oop_vjezbe\vjezba4\zadatak4\fun4.cpp(49): warning C4244: 'return': conversion from 'double' to 'const int', possible loss of data
+  zadatak4.cpp
+d:\antonija\faks\oop\oop_vjezbe\vjezba4\zadatak4\header4.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\antonija\faks\oop\oop_vjezbe\vjezba4\zadatak4\zadatak4.cpp(10): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+d:\antonija\faks\oop\oop_vjezbe\vjezba4\zadatak4\zadatak4.cpp(35): warning C4018: '<': signed/unsigned mismatch
+d:\antonija\faks\oop\oop_vjezbe\vjezba4\zadatak4\zadatak4.cpp(41): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  LINK : D:\Antonija\faks\oop\oop_vjezbe\Vjezba4\Debug\Zadatak4.exe not found or not built by the last incremental link; performing full link
+  Zadatak4.vcxproj -> D:\Antonija\faks\oop\oop_vjezbe\Vjezba4\Debug\Zadatak4.exe

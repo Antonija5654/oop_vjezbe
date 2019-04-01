@@ -3,36 +3,36 @@
 #include "Header2.h"
 using namespace std;
 
-void tocke::postavi(int x, int y, int z)
+void Tocke::postavi(int x, int y, int z)
 {
 	duzina = x;
 	sirina = y;
 	visina = z;
 }
 
-void tocke::random(int a, int b, int c, int d, int e, int f)
+void Tocke::random(int a, int b, int c, int d, int e, int f)
 {
 	duzina = (rand() % ((b + 1) - a) + a);
 	sirina = (rand() % ((d + 1) - c) + c);
 	visina = (rand() % ((f + 1) - e) + e);
 }
 
-const double tocke::duzinaa()
+const double Tocke::duzinaa()
 {
 	return duzina;
 }
 
-const double tocke::sirinaa()
+const double Tocke::sirinaa()
 {
 	return sirina;
 }
 
-const double tocke::visinaa()
+const double Tocke::visinaa()
 {
 	return visina;
 }
 
-const double tocke::oduzmi_2d(tocke t2)
+const double Tocke::oduzmi_2d(Tocke t2)
 {
 	double a, b, c;
 	a = sqrt(duzina*duzina + sirina * sirina);
@@ -41,7 +41,7 @@ const double tocke::oduzmi_2d(tocke t2)
 	return c;
 }
 
-const double tocke::oduzmi_3d(tocke t2)
+const double Tocke::oduzmi_3d(Tocke t2)
 {
 	double a, b, c;
 	a = sqrt(duzina*duzina + sirina * sirina + visina * visina);
@@ -50,7 +50,7 @@ const double tocke::oduzmi_3d(tocke t2)
 	return c;
 }
 
-void gun::shoot()
+void Gun::shoot()
 {
 	if (br_metaka == 0)
 	{
@@ -60,17 +60,17 @@ void gun::shoot()
 	br_metaka--;
 }
 
-void gun::reload()
+void Gun::reload()
 {
 	br_metaka = kapacitet;
 }
 
-void gun::postavi_polozaj()
+void Gun::postavi_polozaj()
 {
 	polozaj.random(1, 6, 3, 8, 2, 10);
 }
 
-int gun::broj_metaka()
+const int Gun::broj_metaka()
 {
 	return br_metaka;
 }

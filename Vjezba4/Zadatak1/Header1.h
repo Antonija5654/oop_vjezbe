@@ -5,7 +5,7 @@
 #include <time.h>
 using namespace std;
 
-class tocke {
+class Tocke {
 private:
 	double duzina, sirina, visina;
 
@@ -20,8 +20,8 @@ public:
 
 	const double visinaa();
 
-	const double oduzmi_2d(tocke t2);
+	const double oduzmi_2d(Tocke t2);
 
-	const double oduzmi_3d(tocke t2);
+	const double oduzmi_3d(Tocke t2);
 };
 #endif

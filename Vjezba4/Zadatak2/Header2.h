@@ -5,7 +5,7 @@
 #include <time.h>
 using namespace std;
 
-class tocke {
+class Tocke {
 private:
 	double duzina, sirina, visina;
 
@@ -20,15 +20,15 @@ public:
 
 	const double visinaa();
 
-	const double oduzmi_2d(tocke t2);
+	const double oduzmi_2d(Tocke t2);
 
-	const double oduzmi_3d(tocke t2);
+	const double oduzmi_3d(Tocke t2);
 };
 
-class gun {
+class Gun {
 private:
 	int br_metaka=6, kapacitet=6;
-	tocke polozaj;
+	Tocke polozaj;
 public:
 	void shoot();
 
@@ -36,7 +36,7 @@ public:
 
 	void postavi_polozaj();
 
-	int broj_metaka();
+	int const broj_metaka();
 };
 
 #endif

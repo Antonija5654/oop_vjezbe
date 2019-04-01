@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 	srand(time(NULL));
-	gun pistolj;
+	Gun pistolj;
 	string unos;
 	while (unos.compare("kraj") != 0)
 	{
