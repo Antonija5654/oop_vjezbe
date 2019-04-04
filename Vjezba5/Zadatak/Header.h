@@ -38,7 +38,7 @@ public:
 class Food {
 private:
 	string vrsta, naziv;
-	int kol_vode, proteini, mast, ugljhidrati, potrebna_kolicina;
+	int kol_vode, proteini, mast, ugljhidrati, potrebna_kolicina, vel_niza;
 	Datum rok;
 	Potrosnja *potr;
 
@@ -55,11 +55,11 @@ public:
 		rok = dat;
 		int vr_u_mj = rok.izracunaj();
 		potr = new Potrosnja[vr_u_mj * 2];
+		vel_niza = vr_u_mj*2;
 		cout << "stvoreno" << endl;
 	}
 
 	Food(const Food& copy) {
-		cout << "COPIED" << endl;
 		vrsta = copy.vrsta;
 		naziv = copy.naziv;
 		kol_vode = copy.kol_vode;
@@ -72,6 +72,7 @@ public:
 		potr = new Potrosnja[vr_u_mj * 2];
 		for (int i = 0; i < vr_u_mj*2; i++) 
 			potr[i] = copy.potr[i];
+		cout << "kopirano" << endl;
 	}
 
 	~Food()

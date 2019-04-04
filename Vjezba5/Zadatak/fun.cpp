@@ -7,33 +7,31 @@ using namespace std;
 
 int provjeri(string tmp)
 {
-	int mj = 2;
-	cout << "tmp koji mi sad triba" << tmp.compare("Apr") << endl;
-	if (tmp.compare("Jan") == 0)
+	int mj = 0;
+	if (tmp[0] == 'J' && tmp[1] == 'a' && tmp[2] == 'n')
 		mj = 1;
-	else if (tmp.compare("Feb") == 0)
+	else if (tmp[0] == 'F' && tmp[1] == 'e' && tmp[2] == 'b')
 		mj = 2;
-	else if (tmp.compare("Mar") == 0)
+	else if (tmp[0] == 'M' && tmp[1] == 'a' && tmp[2] == 'r')
 		mj = 3;
-	else if (tmp.compare("Apr") == 0)
+	else if (tmp[0]=='A' && tmp[1] == 'p' && tmp[2] == 'r')
 		mj = 4;
-	else if (tmp.compare("May") == 0)
+	else if (tmp[0] == 'M' && tmp[1] == 'a' && tmp[2] == 'y')
 		mj = 5;
-	else if (tmp.compare("Jun") == 0)
+	else if (tmp[0] == 'J' && tmp[1] == 'u' && tmp[2] == 'n')
 		mj = 6;
-	else if (tmp.compare("Jul") == 0)
+	else if (tmp[0] == 'J' && tmp[1] == 'u' && tmp[2] == 'l')
 		mj = 7;
-	else if (tmp.compare("Aug") == 0)
+	else if (tmp[0] == 'A' && tmp[1] == 'u' && tmp[2] == 'g')
 		mj = 8;
-	else if (tmp.compare("Sep") == 0)
+	else if (tmp[0] == 'S' && tmp[1] == 'e' && tmp[2] == 'p')
 		mj = 9;
-	else if (tmp.compare("Oct") == 0)
+	else if (tmp[0] == 'O' && tmp[1] == 'c' && tmp[2] == 't')
 		mj = 10;
-	else if (tmp.compare("Nov") == 0)
+	else if (tmp[0] == 'N' && tmp[1] == 'o' && tmp[2] == 'v')
 		mj = 11;
-	else if (tmp.compare("Dec") == 0)
+	else if (tmp[0] == 'D' && tmp[1] == 'e' && tmp[2] == 'c')
 		mj = 12;
-	cout <<"mj u funkciji provjeri"<< mj<<endl;
 	return mj;
 }
 
@@ -116,38 +114,30 @@ void Food::dodaj_u_niz()
 	cin >> m;
 	cin >> g;
 	cin >> r;
-	int n=sizeof(potr)/sizeof(Potrosnja);
 	bool flag = false;
 	god = izdvoji_god();
 	if ((god - g) < 0)
 		cout << "error jos nismo u toj godini" << endl;
 	else
 	{
-		cout << "ispisi n" <<n<< endl;
-		if (n != 0)
+		for (i = 0; i < vel_niza; i++)
 		{
-			for (i = 0; i < n; i++)
+			if (m == potr[i].vrati_mj() && g == potr[i].vrati_god())
 			{
-				cout << "nakon for petlje" << endl;
-				//cout << m << "  " << potr[i].vrati_mj() << "  " << g << "  " << potr[i].vrati_god() << endl;
-				if (m == potr[i].vrati_mj() && g == potr[i].vrati_god())
-				{
-					cout << "taj podatak vec postoji" << endl;
-					flag = true;
-				}
+				cout << "taj podatak vec postoji" << endl;
+				flag = true;
 			}
 		}
 		if (flag == false)
 		{
-			if (n != 0)
+			for (i = 0; i < vel_niza; i++)
 			{
-				for (i = 0; i < n; i++)
-				{
-					if (potr[i].vrati_god() == 0)
-						break;
-				}
+				if (potr[i].vrati_god() == 0)
+					break;
 			}
+			cout << "vel niza 1" << vel_niza << endl;
 			potr[i].dodaj(m, g, r);
+			cout << "vel niza 2" << vel_niza << endl;
 		}
 	}
 }
@@ -158,8 +148,7 @@ int Food::provjeri_potrosnju()
 	int mj = provjeri(tmp);
 	int god = izdvoji_god();
 	int i, rez_pr_god, rez_sad_god, postotak;
-	int n = sizeof(potr) / sizeof(Potrosnja);
-	for (i = 0; i < n; i++)
+	for (i = 0; i < vel_niza; i++)
 	{
 		if (god - 1 == potr[i].vrati_god() && mj == potr[i].vrati_mj())
 			rez_pr_god = potr[i].vrati_rez();
@@ -186,8 +175,7 @@ void const Food::ispisi()
 	cout << "dnevna potrebna kolicina u kg: " << potrebna_kolicina << endl;
 	cout << "podaci o potrosnji:" << endl;
 	int i;
-	int n = sizeof(potr) / sizeof(Potrosnja);
-	for (i = 0; i < n; i++)
+	for (i = 0; i < vel_niza; i++)
 		cout << "mjesec: " << potr[i].vrati_mj() << "  " << "godina: " << potr[i].vrati_god() << "  " << "rezultat: " << potr[i].vrati_rez() << endl;
 }
 
