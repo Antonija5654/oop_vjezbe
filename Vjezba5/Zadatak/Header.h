@@ -58,6 +58,22 @@ public:
 		cout << "stvoreno" << endl;
 	}
 
+	Food(const Food& copy) {
+		cout << "COPIED" << endl;
+		vrsta = copy.vrsta;
+		naziv = copy.naziv;
+		kol_vode = copy.kol_vode;
+		proteini = copy.proteini;
+		mast = copy.mast;
+		ugljhidrati = copy.ugljhidrati;
+		potrebna_kolicina = copy.potrebna_kolicina;
+		rok = copy.rok;
+		int vr_u_mj = rok.izracunaj();
+		potr = new Potrosnja[vr_u_mj * 2];
+		for (int i = 0; i < vr_u_mj*2; i++) 
+			potr[i] = copy.potr[i];
+	}
+
 	~Food()
 	{
 		delete[] potr;
