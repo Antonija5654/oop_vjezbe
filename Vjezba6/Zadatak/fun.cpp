@@ -1,20 +1,20 @@
 #include <iostream>
 #include <math.h>
 #include "Header.h"
-using namespace std;
+using namespace OOP;
 
 int Vec3::counter = 0;
 
-istream& operator >> (istream& a, Vec3& vektor)
+std::istream& OOP::operator >> (istream& a, Vec3& vektor)
 {
-	cout << "upisi x1, y1, z1, x2, y2, z2" << endl;
+	std::cout << "upisi x1, y1, z1, x2, y2, z2" << std::endl;
 	a >> vektor.x1 >> vektor.y1 >> vektor.z1 >> vektor.x2 >> vektor.y2 >> vektor.z2;
 	return a;
 }
 
-ostream& operator << (ostream& a, Vec3& vektor)
+std::ostream& OOP::operator << (ostream& a, Vec3& vektor)
 {
-	a << "x1: " << vektor.x1 << "  " << "y1: " << vektor.y1 << "  " << "z1: " << vektor.z1 << "  " << "x2: " << vektor.x2 << "  " << "y2: " << vektor.y2 << "  " << "z2: " << vektor.z2 << endl;
+	a << "x1: " << vektor.x1 << "  " << "y1: " << vektor.y1 << "  " << "z1: " << vektor.z1 << "  " << "x2: " << vektor.x2 << "  " << "y2: " << vektor.y2 << "  " << "z2: " << vektor.z2 << std::endl;
 	return a;
 }
 
@@ -49,7 +49,7 @@ Vec3 Vec3::operator * (int br)
 
 Vec3 Vec3::operator / (int br)
 {
-	Vec3 novi(x1, y1, z1, x2/br, y2/br, z2/br);
+	Vec3 novi(x1, y1, z1, x2 / br, y2 / br, z2 / br);
 	return novi;
 }
 
@@ -106,7 +106,7 @@ int Vec3::operator * (Vec3 vektor)
 	return (x2 - x1)*(vektor.x2 - vektor.x1) + (y2 - y1)*(vektor.y2 - vektor.y1) + (z2 - z1)*(vektor.z2 - vektor.z1);
 }
 
-int Vec3::operator [] (string str)
+int Vec3::operator [] (std::string str)
 {
 	if (str.compare("0") == 0 || str.compare("x1") == 0)
 		return x1;

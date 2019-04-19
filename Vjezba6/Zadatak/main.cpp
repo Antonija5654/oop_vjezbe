@@ -4,11 +4,11 @@ using namespace std;
 
 int main()
 {
-	Vec3 vektor1;
+	OOP::Vec3 vektor1;
 	cin >> vektor1;
-	Vec3 vektor2;
+	OOP::Vec3 vektor2;
 	cin >> vektor2;
-	Vec3 vektor3;
+	OOP::Vec3 vektor3;
 	vektor3 = vektor1 + vektor2;
 	cout << "operator + " << vektor3;
 	vektor3 = vektor1 - vektor2;
@@ -30,7 +30,7 @@ int main()
 	cout << "vektor3 " << vektor3;
 	if (vektor1 == vektor2)
 		cout << "isti su operator ==" << endl;
-	else 
+	else
 		cout << "nisu isti operator ==" << endl;
 	if (vektor2 != vektor3)
 		cout << "nisu isti operator !=" << endl;

@@ -1,2 +1,5 @@
 ﻿  fun.cpp
-  Zadatak.vcxproj -> D:\Antonija\faks\oop\oop_vjezbe\Vjezba5\Debug\Zadatak.exe
+  main.cpp
+c:\users\strojari\desktop\vjezba5\zadatak\main.cpp(43): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Zadatak.vcxproj -> C:\Users\Strojari\Desktop\Vjezba5\Debug\Zadatak.exe
