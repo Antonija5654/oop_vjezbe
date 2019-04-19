@@ -135,9 +135,9 @@ void Food::dodaj_u_niz()
 				if (potr[i].vrati_god() == 0)
 					break;
 			}
-			cout << "vel niza 1" << vel_niza << endl;
+			cout << "vel niza 1:" << vel_niza << endl;
 			potr[i].dodaj(m, g, r);
-			cout << "vel niza 2" << vel_niza << endl;
+			cout << "vel niza 2:" << vel_niza << endl;
 		}
 	}
 }
@@ -146,14 +146,21 @@ int Food::provjeri_potrosnju()
 {
 	string tmp = izdvoji_mj();
 	int mj = provjeri(tmp);
+	cout << "mjesec" << mj << endl;
 	int god = izdvoji_god();
 	int i, rez_pr_god, rez_sad_god, postotak;
+	cout <<"godina"<< god << endl;
 	for (i = 0; i < vel_niza; i++)
 	{
 		if (god - 1 == potr[i].vrati_god() && mj == potr[i].vrati_mj())
 			rez_pr_god = potr[i].vrati_rez();
-		if (god == potr[i].vrati_god() && mj == potr[i].vrati_mj())
+		else if (god == potr[i].vrati_god() && mj == potr[i].vrati_mj())
 			rez_sad_god = potr[i].vrati_rez();
+		else
+		{
+			cout << "nema dovoljno podataka" << endl;
+			return 0;
+		}
 	}
 	postotak = rez_pr_god / 10;
 	if (rez_sad_god > rez_pr_god + postotak)
@@ -175,6 +182,7 @@ void const Food::ispisi()
 	cout << "dnevna potrebna kolicina u kg: " << potrebna_kolicina << endl;
 	cout << "podaci o potrosnji:" << endl;
 	int i;
+	cout << "Velicina niza: " << vel_niza << endl;
 	for (i = 0; i < vel_niza; i++)
 		cout << "mjesec: " << potr[i].vrati_mj() << "  " << "godina: " << potr[i].vrati_god() << "  " << "rezultat: " << potr[i].vrati_rez() << endl;
 }

@@ -43,6 +43,7 @@ int main()
 	for (i = 0; i < hrana.size(); i++)
 	{
 		hrana[i].ispisi();
+		cout << "Ispisano\n";
 		postotak = hrana[i].provjeri_potrosnju();
 		if (postotak == 0)
 		{

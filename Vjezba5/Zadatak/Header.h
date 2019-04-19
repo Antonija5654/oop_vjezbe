@@ -68,6 +68,7 @@ public:
 		ugljhidrati = copy.ugljhidrati;
 		potrebna_kolicina = copy.potrebna_kolicina;
 		rok = copy.rok;
+		vel_niza = copy.vel_niza;
 		int vr_u_mj = rok.izracunaj();
 		potr = new Potrosnja[vr_u_mj * 2];
 		for (int i = 0; i < vr_u_mj*2; i++) 
