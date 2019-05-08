@@ -154,5 +154,195 @@ void Datum::dodaj_rok(int mj, int god)
 
 ostream& operator << (ostream& os, Sir& s)
 {
+	os <<"naziv: "<< s.naziv << " samostalna kolicina u kg: " << s.samo << "  kolicina u drugim jelima u kg: " << s.dio << endl;
+}
+
+ostream& operator << (ostream& os, Mlijeko& s)
+{
 	os << "samostalna kolicina u kg: " << s.samo << "  kolicina u drugim jelima u kg: " << s.dio << endl;
+}
+
+ostream& operator << (ostream& os, Jogurt& s)
+{
+	os << "samostalna kolicina u kg: " << s.samo << "  kolicina u drugim jelima u kg: " << s.dio << endl;
+}
+
+ostream& operator << (ostream& os, Meso& s)
+{
+	os << "samostalna kolicina u kg: " << s.samo << "  kolicina u drugim jelima u kg: " << s.dio << endl;
+}
+
+ostream& operator << (ostream& os, Sunka& s)
+{
+	os << "samostalna kolicina u kg: " << s.samo << "  kolicina u drugim jelima u kg: " << s.dio << endl;
+}
+
+ostream& operator << (ostream& os, Prsut& s)
+{
+	os << "samostalna kolicina u kg: " << s.samo << "  kolicina u drugim jelima u kg: " << s.dio << endl;
+}
+
+ostream& operator << (ostream& os, Riza& s)
+{
+	os << "samostalna kolicina u kg: " << s.samo << "  kolicina u drugim jelima u kg: " << s.dio << endl;
+}
+
+ostream& operator << (ostream& os, Tofu& s)
+{
+	os << "samostalna kolicina u kg: " << s.samo << "  kolicina u drugim jelima u kg: " << s.dio << endl;
+}
+
+ostream& operator << (ostream& os, Hummus& s)
+{
+	os << "samostalna kolicina u kg: " << s.samo << "  kolicina u drugim jelima u kg: " << s.dio << endl;
+}
+
+ostream& operator << (ostream& os, Madjarica& s)
+{
+	os << "kolicina u kg: " << s.samo << endl;
+}
+
+ostream& operator << (ostream& os, Krempita& s)
+{
+	os << "kolicina u kg: " << s.samo << endl;
+}
+
+ostream& operator << (ostream& os, Torta& s)
+{
+	os << "kolicina u kg: " << s.samo << endl;
+}
+
+istream& operator >> (istream& is, Sir& p)
+{
+	cout << "upisite jeli se koristi samostalno ili kao dio" << endl;
+	is >> p.provj;
+	cout << "upisite iskoristenu kolicinu u kg" << endl;
+	int tmp;
+	is >> tmp;
+	if (p.provj.compare("samo") == 0)
+		p.samo = tmp;
+	else
+		p.dio = tmp;
+}
+
+istream& operator >> (istream& is, Mlijeko& p)
+{
+	cout << "upisite jeli se koristi samostalno ili kao dio" << endl;
+	is >> p.provj;
+	cout << "upisite iskoristenu kolicinu u kg" << endl;
+	int tmp;
+	is >> tmp;
+	if (p.provj.compare("samo") == 0)
+		p.samo = tmp;
+	else
+		p.dio = tmp;
+}
+
+istream& operator >> (istream& is, Jogurt& p)
+{
+	cout << "upisite jeli se koristi samostalno ili kao dio" << endl;
+	is >> p.provj;
+	cout << "upisite iskoristenu kolicinu u kg" << endl;
+	int tmp;
+	is >> tmp;
+	if (p.provj.compare("samo") == 0)
+		p.samo = tmp;
+	else
+		p.dio = tmp;
+}
+
+istream& operator >> (istream& is, Meso& p)
+{
+	cout << "upisite jeli se koristi samostalno ili kao dio" << endl;
+	is >> p.provj;
+	cout << "upisite iskoristenu kolicinu u kg" << endl;
+	int tmp;
+	is >> tmp;
+	if (p.provj.compare("samo") == 0)
+		p.samo = tmp;
+	else
+		p.dio = tmp;
+}
+
+istream& operator >> (istream& is, Sunka& p)
+{
+	cout << "upisite jeli se koristi samostalno ili kao dio" << endl;
+	is >> p.provj;
+	cout << "upisite iskoristenu kolicinu u kg" << endl;
+	int tmp;
+	is >> tmp;
+	if (p.provj.compare("samo") == 0)
+		p.samo = tmp;
+	else
+		p.dio = tmp;
+}
+
+istream& operator >> (istream& is, Prsut& p)
+{
+	cout << "upisite jeli se koristi samostalno ili kao dio" << endl;
+	is >> p.provj;
+	cout << "upisite iskoristenu kolicinu u kg" << endl;
+	int tmp;
+	is >> tmp;
+	if (p.provj.compare("samo") == 0)
+		p.samo = tmp;
+	else
+		p.dio = tmp;
+}
+
+istream& operator >> (istream& is, Riza& p)
+{
+	cout << "upisite jeli se koristi samostalno ili kao dio" << endl;
+	is >> p.provj;
+	cout << "upisite iskoristenu kolicinu u kg" << endl;
+	int tmp;
+	is >> tmp;
+	if (p.provj.compare("samo") == 0)
+		p.samo = tmp;
+	else
+		p.dio = tmp;
+}
+
+istream& operator >> (istream& is, Tofu& p)
+{
+	cout << "upisite jeli se koristi samostalno ili kao dio" << endl;
+	is >> p.provj;
+	cout << "upisite iskoristenu kolicinu u kg" << endl;
+	int tmp;
+	is >> tmp;
+	if (p.provj.compare("samo") == 0)
+		p.samo = tmp;
+	else
+		p.dio = tmp;
+}
+
+istream& operator >> (istream& is, Hummus& p)
+{
+	cout << "upisite jeli se koristi samostalno ili kao dio" << endl;
+	is >> p.provj;
+	cout << "upisite iskoristenu kolicinu u kg" << endl;
+	int tmp;
+	is >> tmp;
+	if (p.provj.compare("samo") == 0)
+		p.samo = tmp;
+	else
+		p.dio = tmp;
+}
+
+istream& operator >> (istream& is, Madjarica& p)
+{
+	cout << "upisite iskoristenu kolicinu u kg" << endl;
+	is >> p.samo;
+}
+
+istream& operator >> (istream& is, Krempita& p)
+{
+	cout << "upisite iskoristenu kolicinu u kg" << endl;
+	is >> p.samo;
+}
+
+istream& operator >> (istream& is, Torta& p)
+{
+	cout << "upisite iskoristenu kolicinu u kg" << endl;
+	is >> p.samo;
 }

@@ -124,7 +124,7 @@ public:
 class Sir : public Mlijecni
 {
 private:
-	bool provj;
+	string provj;
 	float samo, dio;
 public:
 	Sir(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, bool p, float s, float d):
@@ -134,12 +134,16 @@ public:
 		samo = s;
 		dio = d;
 	}
+
+	friend ostream& operator << (ostream& os, Sir& s);
+
+	friend istream& operator >> (istream& is, Sir& p);
 };
 
 class Mlijeko : public Mlijecni
 {
 private:
-	bool provj;
+	string provj;
 	float samo, dio;
 public:
 	Mlijeko(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, bool p, float s, float d) :
@@ -149,12 +153,16 @@ public:
 		samo = s;
 		dio = d;
 	}
+
+	friend ostream& operator << (ostream& os, Mlijeko& s);
+
+	friend istream& operator >> (istream& is, Mlijeko& p);
 };
 
 class Jogurt : public Mlijecni
 {
 private:
-	bool provj;
+	string provj;
 	float samo, dio;
 public:
 	Jogurt(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, bool p, float s, float d) :
@@ -164,12 +172,16 @@ public:
 		samo = s;
 		dio = d;
 	}
+
+	friend ostream& operator << (ostream& os, Jogurt& s);
+
+	friend istream& operator >> (istream& is, Jogurt& p);
 };
 
 class Meso : public Mesni
 {
 private:
-	bool provj;
+	string provj;
 	float samo, dio;
 public:
 	Meso(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, bool p, float s, float d) :
@@ -179,12 +191,16 @@ public:
 		samo = s;
 		dio = d;
 	}
+
+	friend ostream& operator << (ostream& os, Meso& s);
+
+	friend istream& operator >> (istream& is, Meso& p);
 };
 
 class Sunka : public Mesni
 {
 private:
-	bool provj;
+	string provj;
 	float samo, dio;
 public:
 	Sunka(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, bool p, float s, float d) :
@@ -194,12 +210,16 @@ public:
 		samo = s;
 		dio = d;
 	}
+
+	friend ostream& operator << (ostream& os, Sunka& s);
+
+	friend istream& operator >> (istream& is, Sunka& p);
 };
 
 class Prsut : public Mesni
 {
 private:
-	bool provj;
+	string provj;
 	float samo, dio;
 public:
 	Prsut(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, bool p, float s, float d) :
@@ -209,12 +229,16 @@ public:
 		samo = s;
 		dio = d;
 	}
+
+	friend ostream& operator << (ostream& os, Prsut& s);
+
+	friend istream& operator >> (istream& is, Prsut& p);
 };
 
 class Riza : public Vege
 {
 private:
-	bool provj;
+	string provj;
 	float samo, dio;
 public:
 	Riza(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, bool p, float s, float d) :
@@ -224,12 +248,16 @@ public:
 		samo = s;
 		dio = d;
 	}
+
+	friend ostream& operator << (ostream& os, Riza& s);
+
+	friend istream& operator >> (istream& is, Riza& p);
 };
 
 class Tofu : public Vege
 {
 private:
-	bool provj;
+	string provj;
 	float samo, dio;
 public:
 	Tofu(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, bool p, float s, float d) :
@@ -239,12 +267,16 @@ public:
 		samo = s;
 		dio = d;
 	}
+
+	friend ostream& operator << (ostream& os, Tofu& s);
+
+	friend istream& operator >> (istream& is, Tofu& p);
 };
 
 class Hummus : public Vege
 {
 private:
-	bool provj;
+	string provj;
 	float samo, dio;
 public:
 	Hummus(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, bool p, float s, float d) :
@@ -254,6 +286,10 @@ public:
 		samo = s;
 		dio = d;
 	}
+
+	friend ostream& operator << (ostream& os, Hummus& s);
+
+	friend istream& operator >> (istream& is, Hummus& p);
 };
 
 class Madjarica : public Kolaci
@@ -266,6 +302,10 @@ public:
 	{
 		samo = s;
 	}
+
+	friend ostream& operator << (ostream& os, Madjarica& s);
+
+	friend istream& operator >> (istream& is, Madjarica& p);
 };
 
 class Krempita : public Kolaci
@@ -278,6 +318,10 @@ public:
 	{
 		samo = s;
 	}
+
+	friend ostream& operator << (ostream& os, Krempita& s);
+
+	friend istream& operator >> (istream& is, Krempita& p);
 };
 
 class Torta : public Kolaci
@@ -290,6 +334,10 @@ public:
 	{
 		samo = s;
 	}
+
+	friend ostream& operator << (ostream& os, Torta& s);
+
+	friend istream& operator >> (istream& is, Torta& p);
 };
 
 #endif
