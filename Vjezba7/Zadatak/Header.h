@@ -91,6 +91,8 @@ public:
 	int provjeri_potrosnju();
 
 	void const ispisi();
+
+	void virtual print(ostream& os, Sir& s);
 };
 
 class Mlijecni : public Food
@@ -124,13 +126,11 @@ public:
 class Sir : public Mlijecni
 {
 private:
-	string provj;
 	float samo, dio;
 public:
-	Sir(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, bool p, float s, float d):
+	Sir(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, float s, float d) :
 		Mlijecni(vrst, n, voda, prot, m, uglj, potr_kol, dat)
 	{
-		provj = p;
 		samo = s;
 		dio = d;
 	}
@@ -138,18 +138,18 @@ public:
 	friend ostream& operator << (ostream& os, Sir& s);
 
 	friend istream& operator >> (istream& is, Sir& p);
+
+	void print(ostream& os);
 };
 
 class Mlijeko : public Mlijecni
 {
 private:
-	string provj;
 	float samo, dio;
 public:
-	Mlijeko(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, bool p, float s, float d) :
+	Mlijeko(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, float s, float d) :
 		Mlijecni(vrst, n, voda, prot, m, uglj, potr_kol, dat)
 	{
-		provj = p;
 		samo = s;
 		dio = d;
 	}
@@ -162,13 +162,11 @@ public:
 class Jogurt : public Mlijecni
 {
 private:
-	string provj;
 	float samo, dio;
 public:
-	Jogurt(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, bool p, float s, float d) :
+	Jogurt(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, float s, float d) :
 		Mlijecni(vrst, n, voda, prot, m, uglj, potr_kol, dat)
 	{
-		provj = p;
 		samo = s;
 		dio = d;
 	}
@@ -181,13 +179,11 @@ public:
 class Meso : public Mesni
 {
 private:
-	string provj;
 	float samo, dio;
 public:
-	Meso(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, bool p, float s, float d) :
+	Meso(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, float s, float d) :
 		Mesni(vrst, n, voda, prot, m, uglj, potr_kol, dat)
 	{
-		provj = p;
 		samo = s;
 		dio = d;
 	}
@@ -200,13 +196,11 @@ public:
 class Sunka : public Mesni
 {
 private:
-	string provj;
 	float samo, dio;
 public:
-	Sunka(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, bool p, float s, float d) :
+	Sunka(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, float s, float d) :
 		Mesni(vrst, n, voda, prot, m, uglj, potr_kol, dat)
 	{
-		provj = p;
 		samo = s;
 		dio = d;
 	}
@@ -219,13 +213,11 @@ public:
 class Prsut : public Mesni
 {
 private:
-	string provj;
 	float samo, dio;
 public:
-	Prsut(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, bool p, float s, float d) :
+	Prsut(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, float s, float d) :
 		Mesni(vrst, n, voda, prot, m, uglj, potr_kol, dat)
 	{
-		provj = p;
 		samo = s;
 		dio = d;
 	}
@@ -238,13 +230,11 @@ public:
 class Riza : public Vege
 {
 private:
-	string provj;
 	float samo, dio;
 public:
-	Riza(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, bool p, float s, float d) :
+	Riza(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, float s, float d) :
 		Vege(vrst, n, voda, prot, m, uglj, potr_kol, dat)
 	{
-		provj = p;
 		samo = s;
 		dio = d;
 	}
@@ -257,13 +247,11 @@ public:
 class Tofu : public Vege
 {
 private:
-	string provj;
 	float samo, dio;
 public:
-	Tofu(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, bool p, float s, float d) :
+	Tofu(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, float s, float d) :
 		Vege(vrst, n, voda, prot, m, uglj, potr_kol, dat)
 	{
-		provj = p;
 		samo = s;
 		dio = d;
 	}
@@ -276,13 +264,11 @@ public:
 class Hummus : public Vege
 {
 private:
-	string provj;
 	float samo, dio;
 public:
-	Hummus(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, bool p, float s, float d) :
+	Hummus(string vrst, string n, int voda, int prot, int m, int uglj, int potr_kol, Datum dat, float s, float d) :
 		Vege(vrst, n, voda, prot, m, uglj, potr_kol, dat)
 	{
-		provj = p;
 		samo = s;
 		dio = d;
 	}
@@ -339,5 +325,4 @@ public:
 
 	friend istream& operator >> (istream& is, Torta& p);
 };
-
 #endif

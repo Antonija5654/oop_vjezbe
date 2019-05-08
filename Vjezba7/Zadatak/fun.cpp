@@ -152,197 +152,242 @@ void Datum::dodaj_rok(int mj, int god)
 	g = god;
 }
 
+void Sir::print(ostream& os, Sir& s)
+{
+	os << " samostalna kolicina u kg: " << s.samo << "  kolicina u drugim jelima u kg: " << s.dio << endl;
+}
+
 ostream& operator << (ostream& os, Sir& s)
 {
-	os <<"naziv: "<< s.naziv << " samostalna kolicina u kg: " << s.samo << "  kolicina u drugim jelima u kg: " << s.dio << endl;
+	cout << "TEST" << endl;
+	s.print(os);
+	return os;
 }
 
 ostream& operator << (ostream& os, Mlijeko& s)
 {
 	os << "samostalna kolicina u kg: " << s.samo << "  kolicina u drugim jelima u kg: " << s.dio << endl;
+	return os;
 }
 
 ostream& operator << (ostream& os, Jogurt& s)
 {
 	os << "samostalna kolicina u kg: " << s.samo << "  kolicina u drugim jelima u kg: " << s.dio << endl;
+	return os;
 }
 
 ostream& operator << (ostream& os, Meso& s)
 {
 	os << "samostalna kolicina u kg: " << s.samo << "  kolicina u drugim jelima u kg: " << s.dio << endl;
+	return os;
 }
 
 ostream& operator << (ostream& os, Sunka& s)
 {
 	os << "samostalna kolicina u kg: " << s.samo << "  kolicina u drugim jelima u kg: " << s.dio << endl;
+	return os;
 }
 
 ostream& operator << (ostream& os, Prsut& s)
 {
 	os << "samostalna kolicina u kg: " << s.samo << "  kolicina u drugim jelima u kg: " << s.dio << endl;
+	return os;
 }
 
 ostream& operator << (ostream& os, Riza& s)
 {
 	os << "samostalna kolicina u kg: " << s.samo << "  kolicina u drugim jelima u kg: " << s.dio << endl;
+	return os;
 }
 
 ostream& operator << (ostream& os, Tofu& s)
 {
 	os << "samostalna kolicina u kg: " << s.samo << "  kolicina u drugim jelima u kg: " << s.dio << endl;
+	return os;
 }
 
 ostream& operator << (ostream& os, Hummus& s)
 {
 	os << "samostalna kolicina u kg: " << s.samo << "  kolicina u drugim jelima u kg: " << s.dio << endl;
+	return os;
 }
 
 ostream& operator << (ostream& os, Madjarica& s)
 {
 	os << "kolicina u kg: " << s.samo << endl;
+	return os;
 }
 
 ostream& operator << (ostream& os, Krempita& s)
 {
 	os << "kolicina u kg: " << s.samo << endl;
+	return os;
 }
 
 ostream& operator << (ostream& os, Torta& s)
 {
 	os << "kolicina u kg: " << s.samo << endl;
+	return os;
 }
 
 istream& operator >> (istream& is, Sir& p)
 {
+	string provj;
 	cout << "upisite jeli se koristi samostalno ili kao dio" << endl;
-	is >> p.provj;
+	is >> provj;
 	cout << "upisite iskoristenu kolicinu u kg" << endl;
-	int tmp;
+	float tmp;
 	is >> tmp;
-	if (p.provj.compare("samo") == 0)
-		p.samo = tmp;
+	if (provj.compare("samo") == 0)
+		p.samo += tmp;
 	else
-		p.dio = tmp;
+		p.dio += tmp;
+	return is;
 }
 
 istream& operator >> (istream& is, Mlijeko& p)
 {
+	string provj;
 	cout << "upisite jeli se koristi samostalno ili kao dio" << endl;
-	is >> p.provj;
+	is >> provj;
 	cout << "upisite iskoristenu kolicinu u kg" << endl;
-	int tmp;
+	float tmp;
 	is >> tmp;
-	if (p.provj.compare("samo") == 0)
-		p.samo = tmp;
+	if (provj.compare("samo") == 0)
+		p.samo += tmp;
 	else
-		p.dio = tmp;
+		p.dio += tmp;
+	return is;
 }
 
 istream& operator >> (istream& is, Jogurt& p)
 {
+	string provj;
 	cout << "upisite jeli se koristi samostalno ili kao dio" << endl;
-	is >> p.provj;
+	is >> provj;
 	cout << "upisite iskoristenu kolicinu u kg" << endl;
-	int tmp;
+	float tmp;
 	is >> tmp;
-	if (p.provj.compare("samo") == 0)
-		p.samo = tmp;
+	if (provj.compare("samo") == 0)
+		p.samo += tmp;
 	else
-		p.dio = tmp;
+		p.dio += tmp;
+	return is;
 }
 
 istream& operator >> (istream& is, Meso& p)
 {
+	string provj;
 	cout << "upisite jeli se koristi samostalno ili kao dio" << endl;
-	is >> p.provj;
+	is >> provj;
 	cout << "upisite iskoristenu kolicinu u kg" << endl;
-	int tmp;
+	float tmp;
 	is >> tmp;
-	if (p.provj.compare("samo") == 0)
-		p.samo = tmp;
+	if (provj.compare("samo") == 0)
+		p.samo += tmp;
 	else
-		p.dio = tmp;
+		p.dio += tmp;
+	return is;
 }
 
 istream& operator >> (istream& is, Sunka& p)
 {
+	string provj;
 	cout << "upisite jeli se koristi samostalno ili kao dio" << endl;
-	is >> p.provj;
+	is >> provj;
 	cout << "upisite iskoristenu kolicinu u kg" << endl;
-	int tmp;
+	float tmp;
 	is >> tmp;
-	if (p.provj.compare("samo") == 0)
-		p.samo = tmp;
+	if (provj.compare("samo") == 0)
+		p.samo += tmp;
 	else
-		p.dio = tmp;
+		p.dio += tmp;
+	return is;
 }
 
 istream& operator >> (istream& is, Prsut& p)
 {
+	string provj;
 	cout << "upisite jeli se koristi samostalno ili kao dio" << endl;
-	is >> p.provj;
+	is >> provj;
 	cout << "upisite iskoristenu kolicinu u kg" << endl;
-	int tmp;
+	float tmp;
 	is >> tmp;
-	if (p.provj.compare("samo") == 0)
-		p.samo = tmp;
+	if (provj.compare("samo") == 0)
+		p.samo += tmp;
 	else
-		p.dio = tmp;
+		p.dio += tmp;
+	return is;
 }
 
 istream& operator >> (istream& is, Riza& p)
 {
+	string provj;
 	cout << "upisite jeli se koristi samostalno ili kao dio" << endl;
-	is >> p.provj;
+	is >> provj;
 	cout << "upisite iskoristenu kolicinu u kg" << endl;
-	int tmp;
+	float tmp;
 	is >> tmp;
-	if (p.provj.compare("samo") == 0)
-		p.samo = tmp;
+	if (provj.compare("samo") == 0)
+		p.samo += tmp;
 	else
-		p.dio = tmp;
+		p.dio += tmp;
+	return is;
 }
 
 istream& operator >> (istream& is, Tofu& p)
 {
+	string provj;
 	cout << "upisite jeli se koristi samostalno ili kao dio" << endl;
-	is >> p.provj;
+	is >> provj;
 	cout << "upisite iskoristenu kolicinu u kg" << endl;
-	int tmp;
+	float tmp;
 	is >> tmp;
-	if (p.provj.compare("samo") == 0)
-		p.samo = tmp;
+	if (provj.compare("samo") == 0)
+		p.samo += tmp;
 	else
-		p.dio = tmp;
+		p.dio += tmp;
+	return is;
 }
 
 istream& operator >> (istream& is, Hummus& p)
 {
+	string provj;
 	cout << "upisite jeli se koristi samostalno ili kao dio" << endl;
-	is >> p.provj;
+	is >> provj;
 	cout << "upisite iskoristenu kolicinu u kg" << endl;
-	int tmp;
+	float tmp;
 	is >> tmp;
-	if (p.provj.compare("samo") == 0)
-		p.samo = tmp;
+	if (provj.compare("samo") == 0)
+		p.samo += tmp;
 	else
-		p.dio = tmp;
+		p.dio += tmp;
+	return is;
 }
 
 istream& operator >> (istream& is, Madjarica& p)
 {
 	cout << "upisite iskoristenu kolicinu u kg" << endl;
-	is >> p.samo;
+	float tmp;
+	is >> tmp;
+	p.samo += tmp;
+	return is;
 }
 
 istream& operator >> (istream& is, Krempita& p)
 {
 	cout << "upisite iskoristenu kolicinu u kg" << endl;
-	is >> p.samo;
+	float tmp;
+	is >> tmp;
+	p.samo += tmp;
+	return is;
 }
 
 istream& operator >> (istream& is, Torta& p)
 {
 	cout << "upisite iskoristenu kolicinu u kg" << endl;
-	is >> p.samo;
+	float tmp;
+	is >> tmp;
+	p.samo += tmp;
+	return is;
 }

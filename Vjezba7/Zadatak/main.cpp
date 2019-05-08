@@ -2,67 +2,32 @@
 #include "Header.h"
 #include <vector>
 #include <string>
+using namespace std;
 
 int main()
 {
-	vector<Food> hrana;
-	string vrsta, naziv;
-	int kol_vode, proteini, mast, ugljhidrati, potrebna_kolicina;
-	Datum rok;
-	int mj, god, i, postotak;
-	string unos = "";
-	cout << "unesite vrstu" << endl;
-	cin >> vrsta;
-	cout << "unesite naziv" << endl;
-	cin >> naziv;
-	cout << "unesite kolicinu vode" << endl;
-	cin >> kol_vode;
-	cout << "unesite kolicinu proteina" << endl;
-	cin >> proteini;
-	cout << "unesite kolicinu masti" << endl;
-	cin >> mast;
-	cout << "unesite kolicinu ugljikohidrata" << endl;
-	cin >> ugljhidrati;
-	cout << "unesite potrebnu kolicinu" << endl;
-	cin >> potrebna_kolicina;
-	cout << "upisite mjesec i godinu za rok trajanja" << endl;
-	cin >> mj;
-	cin >> god;
-	rok.dodaj_rok(mj, god);
-	Food tmp(vrsta, naziv, kol_vode, proteini, mast, ugljhidrati, potrebna_kolicina, rok);
+	vector<Food*> hrana;
+	Datum tmp;
+	tmp.dodaj_rok(5, 2020);
+	Sir* tmp_sir = new Sir("gl jelo", "steak", 5, 5, 5, 5, 5, tmp, 0, 0);
+	string unos;
 	while (unos.compare("kraj") != 0)
 	{
+		cin >> *tmp_sir;
 		cout << "dodaj ili kraj" << endl;
 		cin >> unos;
-		if (unos.compare("dodaj") == 0)
-		{
-			tmp.dodaj_u_niz();
-		}
 	}
-	hrana.push_back(tmp);
+	hrana.push_back(tmp_sir);
+	Meso* tmp_meso = new Meso("gl jelo", "steak", 5, 5, 5, 5, 5, tmp, 10, 10);
+	hrana.push_back(tmp_meso);
+	Prsut* tmp_prsut = new Prsut("gl jelo", "steak", 5, 5, 5, 5, 5, tmp, 2, 1.2);
+	hrana.push_back(tmp_prsut);
+	Riza* tmp_riza = new Riza("gl jelo", "steak", 5, 5, 5, 5, 5, tmp, 1, 0.6);
+	hrana.push_back(tmp_riza);
+	Torta* tmp_torta = new Torta("gl jelo", "steak", 5, 5, 5, 5, 5, tmp, 0.2);
+	hrana.push_back(tmp_torta);
+	int i;
 	for (i = 0; i < hrana.size(); i++)
-	{
-		hrana[i].ispisi();
-		cout << "Ispisano\n";
-		postotak = hrana[i].provjeri_potrosnju();
-		if (postotak == 0)
-		{
-			cout << "potrosnja se nije smanjila ni povecala za 10% ili vise" << endl;
-		}
-		else if (postotak == 1)
-		{
-			cout << "potrosnja se povecala za 10% ili vise" << endl;
-			hrana[i].povecaj_potr_kol();
-			cout << "ispis nakon povecane potrebne kolicine" << endl;
-			hrana[i].ispisi();
-		}
-		else if (postotak == -1)
-		{
-			cout << "potrosnja se smanjila za 10% ili vise" << endl;
-			hrana[i].smanji_potr_kol();
-			cout << "ispis nakon smanjene potrebne kolicine" << endl;
-			hrana[i].ispisi();
-		}
-	}
+		cout << *hrana[i] << endl;
 	system("pause");
 }
