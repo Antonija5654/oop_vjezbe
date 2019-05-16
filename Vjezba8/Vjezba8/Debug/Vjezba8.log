@@ -1,0 +1,36 @@
+﻿  fun.cpp
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\fun.cpp(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\fun.cpp(5): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\openworld.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\openworld.h(5): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\rpg.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\fun.cpp(6): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\action.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\fun.cpp(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\fun.cpp(8): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\counter.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\fun.cpp(28): warning C4018: '<': signed/unsigned mismatch
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\fun.cpp(40): warning C4018: '<': signed/unsigned mismatch
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\fun.cpp(75): warning C4018: '<': signed/unsigned mismatch
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\fun.cpp(87): warning C4018: '<': signed/unsigned mismatch
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\fun.cpp(122): warning C4018: '<': signed/unsigned mismatch
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\fun.cpp(134): warning C4018: '<': signed/unsigned mismatch
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\fun.cpp(169): warning C4018: '<': signed/unsigned mismatch
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\fun.cpp(181): warning C4018: '<': signed/unsigned mismatch
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\fun.cpp(216): warning C4018: '<': signed/unsigned mismatch
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\fun.cpp(228): warning C4018: '<': signed/unsigned mismatch
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\fun.cpp(250): warning C4018: '<': signed/unsigned mismatch
+  main.cpp
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\main.cpp(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\main.cpp(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\openworld.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\openworld.h(5): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\rpg.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\main.cpp(5): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\action.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\main.cpp(6): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\main.cpp(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\counter.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Generating Code...
+d:\klaic\oop_vjezbe\vjezba8\vjezba8\fun.cpp(269): warning C4715: 'oop::Counter::najcesca_plat': not all control paths return a value
+  Vjezba8.vcxproj -> D:\klaic\oop_vjezbe\Vjezba8\Debug\Zadatak.exe
