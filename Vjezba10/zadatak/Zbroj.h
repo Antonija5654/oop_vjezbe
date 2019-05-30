@@ -15,6 +15,7 @@ public:
 		b = d;
 		cout << "obicna template klasa" << endl;
 	}
+	
 	void sum()
 	{
 		cout << a + b << endl;
@@ -33,6 +34,7 @@ public:
 		b = d;
 		cout << "specijalizacijska template klasa" << endl;
 	}
+	
 	void sum()
 	{
 		if (isdigit(a) && isdigit(b))

@@ -18,13 +18,11 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Zbroj.h">
+    <ClCompile Include="Zbroj.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Stack.h">
+    </ClCompile>
+    <ClCompile Include="Stack.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
+    </ClCompile>
   </ItemGroup>
 </Project>
