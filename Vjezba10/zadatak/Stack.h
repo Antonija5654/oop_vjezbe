@@ -36,10 +36,7 @@ public:
 	
 	bool provjeri_jeli_popunjeno()
 	{
-		if (top == size)
-			return true;
-		else
-			return false;
+		return top == size;
 	}
 
 	bool provjeri_jeli_prazno()
