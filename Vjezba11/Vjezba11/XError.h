@@ -1,15 +1,12 @@
 #ifndef XERROR_H
 #define XERROR_H
-#include <string>
+#include <iostream>
 using namespace std;
 
 class XError
 {
-private:
-	string poruka;
 public:
-
+	virtual void ispisi(ofstream& dat) = 0;
 };
-
 
 #endif
