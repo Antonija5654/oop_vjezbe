@@ -6,8 +6,8 @@ using namespace std;
 int main()
 {
 	srand(time(NULL));
-	tocke t1;
-	tocke t2;
+	Tocke t1;
+	Tocke t2;
 	t1.postavi(15, 7);
 	t2.random(1, 6, 3, 8, 2, 10);
 	cout << "t1 duzina " << t1.duzinaa() <<" ";
